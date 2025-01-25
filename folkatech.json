@@ -1,0 +1,2521 @@
+{
+    "collection": {
+        "info": {
+            "_postman_id": "0b6c7ed3-02f4-40ca-aa2e-276e4109d4f8",
+            "name": "Lapor Folkatech - QA Automation",
+            "description": "Collection ini peruntukan dan dipergunakan hanya untuk kebutuhan technical test",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+            "updatedAt": "2024-08-29T06:14:31.000Z",
+            "createdAt": "2024-08-29T06:07:23.000Z",
+            "lastUpdatedBy": "31640299",
+            "uid": "31640299-0b6c7ed3-02f4-40ca-aa2e-276e4109d4f8"
+        },
+        "item": [
+            {
+                "name": "Accounts",
+                "item": [
+                    {
+                        "name": "Profile",
+                        "item": [
+                            {
+                                "name": "Get User Profile",
+                                "id": "729edc02-e39b-4b05-bb02-36c4cc25a3dc",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "auth": {
+                                        "type": "bearer",
+                                        "bearer": [
+                                            {
+                                                "key": "token",
+                                                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvc2FwYTEyOS5rZW1lbnBwcGEuZ28uaWRcL2FwaVwvbG9naW4iLCJpYXQiOjE2OTM5MDQwNjgsImV4cCI6MTY5MzkwNzY2OCwibmJmIjoxNjkzOTA0MDY4LCJqdGkiOiJEQjJWUFQxV1RuQTN3UTV6Iiwic3ViIjoxMCwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.iTrDWmgvV450couanyPQ8wyiRHMlccGJimHGeYtda-E",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "{{api}}/api/user/profile",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "user",
+                                            "profile"
+                                        ]
+                                    }
+                                },
+                                "response": [
+                                    {
+                                        "id": "ce22eb97-8fc2-4b9f-bb89-630f4112b0e5",
+                                        "name": "200 - OK",
+                                        "originalRequest": {
+                                            "method": "GET",
+                                            "header": [],
+                                            "url": {
+                                                "raw": "{{api}}/api/user/profile",
+                                                "host": [
+                                                    "{{api}}"
+                                                ],
+                                                "path": [
+                                                    "api",
+                                                    "user",
+                                                    "profile"
+                                                ]
+                                            }
+                                        },
+                                        "status": "OK",
+                                        "code": 200,
+                                        "_postman_previewlanguage": "json",
+                                        "header": [
+                                            {
+                                                "key": "Host",
+                                                "value": "127.0.0.1:8000"
+                                            },
+                                            {
+                                                "key": "Date",
+                                                "value": "Sun, 23 Jul 2023 16:00:45 GMT"
+                                            },
+                                            {
+                                                "key": "Date",
+                                                "value": "Sun, 23 Jul 2023 16:00:45 GMT"
+                                            },
+                                            {
+                                                "key": "Connection",
+                                                "value": "close"
+                                            },
+                                            {
+                                                "key": "X-Powered-By",
+                                                "value": "PHP/7.4.33"
+                                            },
+                                            {
+                                                "key": "Cache-Control",
+                                                "value": "no-cache, private"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "X-RateLimit-Limit",
+                                                "value": "60"
+                                            },
+                                            {
+                                                "key": "X-RateLimit-Remaining",
+                                                "value": "59"
+                                            },
+                                            {
+                                                "key": "Access-Control-Allow-Origin",
+                                                "value": "*"
+                                            }
+                                        ],
+                                        "cookie": [],
+                                        "responseTime": null,
+                                        "body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 7,\n        \"name\": \"Rahmat Saefulloh\",\n        \"email\": \"rhmtsaepuloh@gmail.com\",\n        \"email_verified_at\": null,\n        \"role_id\": 2,\n        \"unit_id\": null,\n        \"created_at\": \"2023-07-21T02:27:00.000000Z\",\n        \"updated_at\": \"2023-07-23T15:51:13.000000Z\",\n        \"deleted_at\": null,\n        \"provider_name\": null,\n        \"provider_id\": null,\n        \"phone_number\": null,\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw\",\n        \"last_login\": \"2023-07-23 22:51:13\",\n        \"image_profile\": null,\n        \"is_active\": 1\n    }\n}",
+                                        "uid": "31640299-ce22eb97-8fc2-4b9f-bb89-630f4112b0e5"
+                                    }
+                                ],
+                                "uid": "31640299-729edc02-e39b-4b05-bb02-36c4cc25a3dc"
+                            },
+                            {
+                                "name": "Update User Profile",
+                                "id": "bfb9bccd-634d-4fe7-a59f-905f185a5bb0",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "auth": {
+                                        "type": "bearer",
+                                        "bearer": [
+                                            {
+                                                "key": "token",
+                                                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    "method": "PUT",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n    \"name\": \"Rahmat Saefulloh\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{api}}/api/user/profile",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "user",
+                                            "profile"
+                                        ]
+                                    }
+                                },
+                                "response": [
+                                    {
+                                        "id": "a62d8a16-3d39-4f38-854f-7ee4c02f53d3",
+                                        "name": "200 - OK",
+                                        "originalRequest": {
+                                            "method": "PUT",
+                                            "header": [],
+                                            "body": {
+                                                "mode": "raw",
+                                                "raw": "{\n    \"name\": \"Rahmat Saefulloh\"\n}",
+                                                "options": {
+                                                    "raw": {
+                                                        "language": "json"
+                                                    }
+                                                }
+                                            },
+                                            "url": {
+                                                "raw": "{{api}}/api/user/profile",
+                                                "host": [
+                                                    "{{api}}"
+                                                ],
+                                                "path": [
+                                                    "api",
+                                                    "user",
+                                                    "profile"
+                                                ]
+                                            }
+                                        },
+                                        "status": "OK",
+                                        "code": 200,
+                                        "_postman_previewlanguage": "json",
+                                        "header": [
+                                            {
+                                                "key": "Host",
+                                                "value": "127.0.0.1:8000"
+                                            },
+                                            {
+                                                "key": "Date",
+                                                "value": "Sun, 23 Jul 2023 16:13:18 GMT"
+                                            },
+                                            {
+                                                "key": "Date",
+                                                "value": "Sun, 23 Jul 2023 16:13:18 GMT"
+                                            },
+                                            {
+                                                "key": "Connection",
+                                                "value": "close"
+                                            },
+                                            {
+                                                "key": "X-Powered-By",
+                                                "value": "PHP/7.4.33"
+                                            },
+                                            {
+                                                "key": "Cache-Control",
+                                                "value": "no-cache, private"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "X-RateLimit-Limit",
+                                                "value": "60"
+                                            },
+                                            {
+                                                "key": "X-RateLimit-Remaining",
+                                                "value": "58"
+                                            },
+                                            {
+                                                "key": "Access-Control-Allow-Origin",
+                                                "value": "*"
+                                            }
+                                        ],
+                                        "cookie": [],
+                                        "responseTime": null,
+                                        "body": "{\n    \"status\": true,\n    \"message\": \"Data berhasil disimpan\",\n    \"data\": {\n        \"id\": 7,\n        \"name\": \"Rahmat Saefulloh\",\n        \"email\": \"rhmtsaepuloh@gmail.com\",\n        \"email_verified_at\": null,\n        \"role_id\": 2,\n        \"unit_id\": null,\n        \"created_at\": \"2023-07-21T02:27:00.000000Z\",\n        \"updated_at\": \"2023-07-23T15:51:13.000000Z\",\n        \"deleted_at\": null,\n        \"provider_name\": null,\n        \"provider_id\": null,\n        \"phone_number\": null,\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw\",\n        \"last_login\": \"2023-07-23 22:51:13\",\n        \"image_profile\": null,\n        \"is_active\": 1\n    }\n}",
+                                        "uid": "31640299-a62d8a16-3d39-4f38-854f-7ee4c02f53d3"
+                                    }
+                                ],
+                                "uid": "31640299-bfb9bccd-634d-4fe7-a59f-905f185a5bb0"
+                            },
+                            {
+                                "name": "Change Password",
+                                "id": "b319c569-fb30-47fe-9b58-6e53a3d2a11a",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "auth": {
+                                        "type": "bearer",
+                                        "bearer": [
+                                            {
+                                                "key": "token",
+                                                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    "method": "PUT",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n    \"oldPassword\": \"Qwerty123!\",\n    \"newPassword\": \"12345\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{api}}/api/user/change-password",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "user",
+                                            "change-password"
+                                        ]
+                                    }
+                                },
+                                "response": [
+                                    {
+                                        "id": "7ae1d674-601b-4b13-8dd1-f2bc0d43e38a",
+                                        "name": "200 - OK",
+                                        "originalRequest": {
+                                            "method": "PUT",
+                                            "header": [],
+                                            "body": {
+                                                "mode": "raw",
+                                                "raw": "{\n    \"oldPassword\": \"Qwerty123!\",\n    \"newPassword\": \"12345\"\n}",
+                                                "options": {
+                                                    "raw": {
+                                                        "language": "json"
+                                                    }
+                                                }
+                                            },
+                                            "url": {
+                                                "raw": "{{api}}/api/user/change-password",
+                                                "host": [
+                                                    "{{api}}"
+                                                ],
+                                                "path": [
+                                                    "api",
+                                                    "user",
+                                                    "change-password"
+                                                ]
+                                            }
+                                        },
+                                        "status": "OK",
+                                        "code": 200,
+                                        "_postman_previewlanguage": "json",
+                                        "header": [
+                                            {
+                                                "key": "Host",
+                                                "value": "127.0.0.1:8000"
+                                            },
+                                            {
+                                                "key": "Date",
+                                                "value": "Mon, 24 Jul 2023 07:45:51 GMT"
+                                            },
+                                            {
+                                                "key": "Date",
+                                                "value": "Mon, 24 Jul 2023 07:45:51 GMT"
+                                            },
+                                            {
+                                                "key": "Connection",
+                                                "value": "close"
+                                            },
+                                            {
+                                                "key": "X-Powered-By",
+                                                "value": "PHP/7.4.33"
+                                            },
+                                            {
+                                                "key": "Cache-Control",
+                                                "value": "no-cache, private"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "X-RateLimit-Limit",
+                                                "value": "60"
+                                            },
+                                            {
+                                                "key": "X-RateLimit-Remaining",
+                                                "value": "59"
+                                            },
+                                            {
+                                                "key": "Access-Control-Allow-Origin",
+                                                "value": "*"
+                                            }
+                                        ],
+                                        "cookie": [],
+                                        "responseTime": null,
+                                        "body": "{\n    \"status\": true,\n    \"message\": \"Data berhasil diubah.\"\n}",
+                                        "uid": "31640299-7ae1d674-601b-4b13-8dd1-f2bc0d43e38a"
+                                    }
+                                ],
+                                "uid": "31640299-b319c569-fb30-47fe-9b58-6e53a3d2a11a"
+                            },
+                            {
+                                "name": "Change Avatar",
+                                "id": "448859dc-fe8f-4400-b0a6-b2c8aeabb47b",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "auth": {
+                                        "type": "bearer",
+                                        "bearer": [
+                                            {
+                                                "key": "token",
+                                                "value": "{{token}}",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "formdata",
+                                        "formdata": [
+                                            {
+                                                "key": "userfile",
+                                                "type": "file",
+                                                "src": "/Users/rhmtsaepuloh/Downloads/Untitled-1-01.png"
+                                            }
+                                        ]
+                                    },
+                                    "url": {
+                                        "raw": "{{api}}/api/user/change-avatar",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "user",
+                                            "change-avatar"
+                                        ]
+                                    }
+                                },
+                                "response": [
+                                    {
+                                        "id": "bec542df-2e63-4644-aec4-56ce94782ae9",
+                                        "name": "200 - OK",
+                                        "originalRequest": {
+                                            "method": "POST",
+                                            "header": [],
+                                            "body": {
+                                                "mode": "formdata",
+                                                "formdata": [
+                                                    {
+                                                        "key": "userfile",
+                                                        "type": "file",
+                                                        "src": "/Users/rhmtsaepuloh/Downloads/5wPdO_1688622116.jpg"
+                                                    }
+                                                ]
+                                            },
+                                            "url": {
+                                                "raw": "{{api}}/api/user/change-avatar",
+                                                "host": [
+                                                    "{{api}}"
+                                                ],
+                                                "path": [
+                                                    "api",
+                                                    "user",
+                                                    "change-avatar"
+                                                ]
+                                            }
+                                        },
+                                        "status": "OK",
+                                        "code": 200,
+                                        "_postman_previewlanguage": "json",
+                                        "header": [
+                                            {
+                                                "key": "Host",
+                                                "value": "127.0.0.1:8000"
+                                            },
+                                            {
+                                                "key": "Date",
+                                                "value": "Mon, 24 Jul 2023 08:13:04 GMT"
+                                            },
+                                            {
+                                                "key": "Date",
+                                                "value": "Mon, 24 Jul 2023 08:13:04 GMT"
+                                            },
+                                            {
+                                                "key": "Connection",
+                                                "value": "close"
+                                            },
+                                            {
+                                                "key": "X-Powered-By",
+                                                "value": "PHP/7.4.33"
+                                            },
+                                            {
+                                                "key": "Cache-Control",
+                                                "value": "no-cache, private"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "X-RateLimit-Limit",
+                                                "value": "60"
+                                            },
+                                            {
+                                                "key": "X-RateLimit-Remaining",
+                                                "value": "59"
+                                            },
+                                            {
+                                                "key": "Access-Control-Allow-Origin",
+                                                "value": "*"
+                                            }
+                                        ],
+                                        "cookie": [],
+                                        "responseTime": null,
+                                        "body": "{\n    \"status\": true,\n    \"message\": \"Data berhasil disimpan.\",\n    \"data\": {\n        \"id\": 7,\n        \"name\": \"Rahmat Saefulloh\",\n        \"email\": \"rhmtsaepuloh@gmail.com\",\n        \"email_verified_at\": null,\n        \"role_id\": 2,\n        \"unit_id\": null,\n        \"created_at\": \"2023-07-21T02:27:00.000000Z\",\n        \"updated_at\": \"2023-07-24T08:13:04.000000Z\",\n        \"deleted_at\": null,\n        \"provider_name\": null,\n        \"provider_id\": null,\n        \"phone_number\": null,\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw\",\n        \"last_login\": \"2023-07-23 22:51:13\",\n        \"image_profile\": \"wCGXo_1690186384.jpg\",\n        \"is_active\": 1\n    }\n}",
+                                        "uid": "31640299-bec542df-2e63-4644-aec4-56ce94782ae9"
+                                    }
+                                ],
+                                "uid": "31640299-448859dc-fe8f-4400-b0a6-b2c8aeabb47b"
+                            }
+                        ],
+                        "id": "6af21434-c458-4571-8e82-62630501c7b5",
+                        "uid": "31640299-6af21434-c458-4571-8e82-62630501c7b5"
+                    },
+                    {
+                        "name": "Register",
+                        "id": "e2ac98e4-4df3-44b2-b4a4-d131a7cd94c1",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "POST",
+                            "header": [
+                                {
+                                    "key": "Accept",
+                                    "value": "application/json",
+                                    "type": "text"
+                                }
+                            ],
+                            "body": {
+                                "mode": "urlencoded",
+                                "urlencoded": [
+                                    {
+                                        "key": "name",
+                                        "value": "Rahmat Saefulloh",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "email",
+                                        "value": "rhmtsaepuloh@gmail.com",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "password",
+                                        "value": "Qwerty123!",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "password_confirmation",
+                                        "value": "Qwerty123!",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "phone",
+                                        "value": "0893",
+                                        "type": "text"
+                                    }
+                                ]
+                            },
+                            "url": {
+                                "raw": "{{api}}/api/register",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "register"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "af8be9b1-4b48-43f0-bb70-022767058579",
+                                "name": "Register",
+                                "originalRequest": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "urlencoded",
+                                        "urlencoded": [
+                                            {
+                                                "key": "name",
+                                                "value": "Tatang Basher",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "email",
+                                                "value": "tatang@gmail.com",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "password",
+                                                "value": "secret",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "password_confirmation",
+                                                "value": "secret",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "role_id",
+                                                "value": "1",
+                                                "type": "text"
+                                            }
+                                        ]
+                                    },
+                                    "url": {
+                                        "raw": "{{api}}/api/register",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "register"
+                                        ]
+                                    }
+                                },
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "description": "",
+                                        "type": "text"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"code\": 201,\n    \"message\": \"user registered successfully\",\n    \"success\": true,\n    \"data\": {\n        \"name\": \"Tatang Basher\",\n        \"email\": \"tatang@gmail.com\",\n        \"role_id\": \"1\",\n        \"unit_id\": \"1\",\n        \"updated_at\": \"2023-07-10T04:11:53.000000Z\",\n        \"created_at\": \"2023-07-10T04:11:53.000000Z\",\n        \"id\": 3\n    }\n}",
+                                "uid": "31640299-af8be9b1-4b48-43f0-bb70-022767058579"
+                            },
+                            {
+                                "id": "9abb91a3-e16e-468c-813d-91cf9732a049",
+                                "name": "Failed - User Exists",
+                                "originalRequest": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "urlencoded",
+                                        "urlencoded": [
+                                            {
+                                                "key": "name",
+                                                "value": "Tatang Basher",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "email",
+                                                "value": "tatang@gmail.com",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "password",
+                                                "value": "secret",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "password_confirmation",
+                                                "value": "secret",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "role_id",
+                                                "value": "1",
+                                                "type": "text"
+                                            }
+                                        ]
+                                    },
+                                    "url": {
+                                        "raw": "{{api}}/api/register",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "register"
+                                        ]
+                                    }
+                                },
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "description": "",
+                                        "type": "text"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"code\": 400,\n    \"message\": \"The email has already been taken.\",\n    \"success\": false,\n    \"data\": {}\n}",
+                                "uid": "31640299-9abb91a3-e16e-468c-813d-91cf9732a049"
+                            }
+                        ],
+                        "uid": "31640299-e2ac98e4-4df3-44b2-b4a4-d131a7cd94c1"
+                    },
+                    {
+                        "name": "Login",
+                        "id": "d77c5142-10f8-4014-af5f-e360578e7d70",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "POST",
+                            "header": [
+                                {
+                                    "key": "Accept",
+                                    "value": "application/json",
+                                    "type": "text"
+                                }
+                            ],
+                            "body": {
+                                "mode": "urlencoded",
+                                "urlencoded": [
+                                    {
+                                        "key": "email",
+                                        "value": "rhmtsaepuloh@gmail.com",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "password",
+                                        "value": "password",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "reg_id",
+                                        "value": "12345",
+                                        "type": "text"
+                                    }
+                                ]
+                            },
+                            "url": {
+                                "raw": "{{api}}/api/login",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "login"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "acc09a9e-5c50-4dd0-b8f0-dd6b2a3befac",
+                                "name": "Success",
+                                "originalRequest": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "urlencoded",
+                                        "urlencoded": [
+                                            {
+                                                "key": "email",
+                                                "value": "tatang@gmail.com",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "password",
+                                                "value": "secret",
+                                                "type": "text"
+                                            }
+                                        ]
+                                    },
+                                    "url": {
+                                        "raw": "{{api}}/api/login",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "login"
+                                        ]
+                                    }
+                                },
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "description": "",
+                                        "type": "text"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"code\": 200,\n    \"message\": \"User logged in\",\n    \"success\": true,\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"Tatang Basher\",\n        \"email\": \"tatang@gmail.com\",\n        \"email_verified_at\": null,\n        \"role_id\": 1,\n        \"created_at\": \"2023-07-06T07:23:06.000000Z\",\n        \"updated_at\": \"2023-07-06T07:23:06.000000Z\",\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4ODYzMjk3NSwiZXhwIjoxNjg4NjM2NTc1LCJuYmYiOjE2ODg2MzI5NzUsImp0aSI6IjlBcVJ6bkxwemJ2M1hPSmciLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.0WtCz_0JGT5pCC988EdSteTMHOJFZUZ_ZGgRB0iI5Po\"\n    }\n}",
+                                "uid": "31640299-acc09a9e-5c50-4dd0-b8f0-dd6b2a3befac"
+                            },
+                            {
+                                "id": "aa6b4243-5d08-4f9c-9c37-68634085b7e4",
+                                "name": "Failed - Incorrect Credentials",
+                                "originalRequest": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "urlencoded",
+                                        "urlencoded": [
+                                            {
+                                                "key": "email",
+                                                "value": "tatang@gmail.com",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "password",
+                                                "value": "secret",
+                                                "type": "text"
+                                            }
+                                        ]
+                                    },
+                                    "url": {
+                                        "raw": "{{api}}/api/login",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "login"
+                                        ]
+                                    }
+                                },
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "description": "",
+                                        "type": "text"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"code\": 401,\n    \"message\": \"Invalid email or password\",\n    \"success\": false,\n    \"data\": {}\n}",
+                                "uid": "31640299-aa6b4243-5d08-4f9c-9c37-68634085b7e4"
+                            }
+                        ],
+                        "uid": "31640299-d77c5142-10f8-4014-af5f-e360578e7d70"
+                    },
+                    {
+                        "name": "Logout",
+                        "id": "3270b7fe-eb25-4fa2-b9c2-bd81f0f32014",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "auth": {
+                                "type": "bearer",
+                                "bearer": [
+                                    {
+                                        "key": "token",
+                                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4ODYzNjQwMCwiZXhwIjoxNjg4NjQwMDAwLCJuYmYiOjE2ODg2MzY0MDAsImp0aSI6IjF0MFpLd2xFOTFOT3EwV3MiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1Di6lP5pYEnEXw_ajtmVIrxMsUfpcXb0pVc6TDFNuu0",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "method": "POST",
+                            "header": [
+                                {
+                                    "key": "Accept",
+                                    "value": "application/json",
+                                    "type": "text"
+                                }
+                            ],
+                            "url": {
+                                "raw": "{{api}}/api/logout",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "logout"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "4f9d2dba-8032-4289-b680-e0c1cffc3b16",
+                                "name": "Success",
+                                "originalRequest": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "url": {
+                                        "raw": "{{api}}/api/logout",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "logout"
+                                        ]
+                                    }
+                                },
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "description": "",
+                                        "type": "text"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"code\": 200,\n    \"message\": \"Successfully logged out\",\n    \"success\": false,\n    \"data\": {}\n}",
+                                "uid": "31640299-4f9d2dba-8032-4289-b680-e0c1cffc3b16"
+                            },
+                            {
+                                "id": "9c3632c5-0d96-4be4-9b11-3e4a366d4487",
+                                "name": "Failed",
+                                "originalRequest": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "url": {
+                                        "raw": "{{api}}/api/logout",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "logout"
+                                        ]
+                                    }
+                                },
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "description": "",
+                                        "type": "text"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\r\n    \"code\": 403,\r\n    \"message\": \"Unauthenticate\",\r\n    \"success\": false,\r\n    \"data\": {}\r\n}",
+                                "uid": "31640299-9c3632c5-0d96-4be4-9b11-3e4a366d4487"
+                            }
+                        ],
+                        "uid": "31640299-3270b7fe-eb25-4fa2-b9c2-bd81f0f32014"
+                    },
+                    {
+                        "name": "Forgot Password",
+                        "id": "1ea9aba7-cdcb-4c82-9094-86e75c30c160",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\n    \"email\": \"rhmtsaepuloh@gmail.com\"\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{api}}/api/forgot-password",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "forgot-password"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "509757bd-7d2c-4e88-aa8a-e0846d080db3",
+                                "name": "200 - OK",
+                                "originalRequest": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n    \"email\": \"rhmtsaepuloh@gmail.com\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{api}}/api/forgot-password",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "forgot-password"
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Host",
+                                        "value": "127.0.0.1:8000"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Fri, 28 Jul 2023 16:13:15 GMT"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Fri, 28 Jul 2023 16:13:15 GMT"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "close"
+                                    },
+                                    {
+                                        "key": "X-Powered-By",
+                                        "value": "PHP/7.4.33"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, private"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Limit",
+                                        "value": "60"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Remaining",
+                                        "value": "59"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"status\": true,\n    \"message\": \"Success.\"\n}",
+                                "uid": "31640299-509757bd-7d2c-4e88-aa8a-e0846d080db3"
+                            }
+                        ],
+                        "uid": "31640299-1ea9aba7-cdcb-4c82-9094-86e75c30c160"
+                    }
+                ],
+                "id": "05d3d869-4d6b-4134-9d12-d6952973d989",
+                "uid": "31640299-05d3d869-4d6b-4134-9d12-d6952973d989"
+            },
+            {
+                "name": "UPTD",
+                "item": [
+                    {
+                        "name": "Get All UPTD",
+                        "id": "be91ca4d-6844-4d18-af77-2e7c78cead54",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "auth": {
+                                "type": "bearer",
+                                "bearer": [
+                                    {
+                                        "key": "token",
+                                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{api}}/api/uptd",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "uptd"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "8637ec8e-0202-46f0-af58-5b129e82e934",
+                                "name": "200 - OK",
+                                "originalRequest": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "{{api}}/api/uptd",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "uptd"
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Host",
+                                        "value": "127.0.0.1:8000"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Fri, 21 Jul 2023 02:41:22 GMT"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Fri, 21 Jul 2023 02:41:22 GMT"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "close"
+                                    },
+                                    {
+                                        "key": "X-Powered-By",
+                                        "value": "PHP/7.4.33"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, private"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Limit",
+                                        "value": "60"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Remaining",
+                                        "value": "58"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"message\": \"UPTD data\",\n    \"status\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Smartplan\",\n            \"address\": \"Cimahi\",\n            \"phone_number\": \"0895392054983\",\n            \"lat\": \"1\",\n            \"lng\": \"1\",\n            \"name_head_unit\": \"Rahmat\",\n            \"created_at\": \"2023-07-21T02:39:08.000000Z\",\n            \"updated_at\": \"2023-07-21T02:39:08.000000Z\"\n        }\n    ]\n}",
+                                "uid": "31640299-8637ec8e-0202-46f0-af58-5b129e82e934"
+                            }
+                        ],
+                        "uid": "31640299-be91ca4d-6844-4d18-af77-2e7c78cead54"
+                    },
+                    {
+                        "name": "Get Detail By Id",
+                        "id": "d2129413-da42-48d6-b58e-6c3b3388fada",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "auth": {
+                                "type": "bearer",
+                                "bearer": [
+                                    {
+                                        "key": "token",
+                                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4OTkwNjQzNywiZXhwIjoxNjg5OTEwMDM3LCJuYmYiOjE2ODk5MDY0MzcsImp0aSI6Im02RFJZWGZjNDd5akRGQ0EiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1CB7F1OcmBXrDeYAUabauQ7q4eAXkE5D1cIjzBWvymw",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{api}}/api/uptd/1",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "uptd",
+                                    "1"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "1de31bc5-cf32-48a5-a871-3ef933a0f753",
+                                "name": "200 - OK",
+                                "originalRequest": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "{{api}}/api/uptd/1",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "uptd",
+                                            "1"
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Host",
+                                        "value": "127.0.0.1:8000"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Fri, 21 Jul 2023 02:44:47 GMT"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Fri, 21 Jul 2023 02:44:47 GMT"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "close"
+                                    },
+                                    {
+                                        "key": "X-Powered-By",
+                                        "value": "PHP/7.4.33"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, private"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Limit",
+                                        "value": "60"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Remaining",
+                                        "value": "56"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"message\": \"Report categories data\",\n    \"status\": true,\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Smartplan\",\n        \"address\": \"Cimahi\",\n        \"phone_number\": \"0895392054983\",\n        \"lat\": \"1\",\n        \"lng\": \"1\",\n        \"name_head_unit\": \"Rahmat\",\n        \"created_at\": \"2023-07-21T02:39:08.000000Z\",\n        \"updated_at\": \"2023-07-21T02:39:08.000000Z\"\n    }\n}",
+                                "uid": "31640299-1de31bc5-cf32-48a5-a871-3ef933a0f753"
+                            }
+                        ],
+                        "uid": "31640299-d2129413-da42-48d6-b58e-6c3b3388fada"
+                    }
+                ],
+                "id": "7a4572da-260a-4b8e-becc-074d721ff405",
+                "uid": "31640299-7a4572da-260a-4b8e-becc-074d721ff405"
+            },
+            {
+                "name": "Information",
+                "item": [
+                    {
+                        "name": "Get All",
+                        "id": "beb89cc4-336b-4029-93c4-87cf9c521043",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "auth": {
+                                "type": "bearer",
+                                "bearer": [
+                                    {
+                                        "key": "token",
+                                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{api}}/api/information",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "information"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "ee6fd6c0-f8e3-418f-8782-6fa448cdea97",
+                                "name": "200 - OK",
+                                "originalRequest": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "{{api}}/api/information",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "information"
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Host",
+                                        "value": "127.0.0.1:8000"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Fri, 28 Jul 2023 02:39:20 GMT"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Fri, 28 Jul 2023 02:39:20 GMT"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "close"
+                                    },
+                                    {
+                                        "key": "X-Powered-By",
+                                        "value": "PHP/7.4.33"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, private"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Limit",
+                                        "value": "60"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Remaining",
+                                        "value": "58"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"message\": \"Success\",\n    \"status\": true,\n    \"data\": [\n        {\n            \"id\": 3,\n            \"title\": \"test\",\n            \"description\": \"Test\",\n            \"thumbnail\": \"http://127.0.0.1:8000/storage/thumbnails/9d7f1b9e041ab98b3b0298a2d454991f.jpg\",\n            \"is_active\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2023-07-12T22:57:46.000000Z\",\n            \"updated_at\": \"2023-07-12T22:58:02.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"test kedua\",\n            \"description\": \"test yaa\",\n            \"thumbnail\": \"http://127.0.0.1:8000/storage/thumbnails/20230721103747.png\",\n            \"is_active\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2023-07-21T03:37:47.000000Z\",\n            \"updated_at\": \"2023-07-21T03:37:47.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Tes ketiga\",\n            \"description\": \"test aja\",\n            \"thumbnail\": \"http://127.0.0.1:8000/storage/thumbnails/20230728091041.png\",\n            \"is_active\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2023-07-28T02:10:41.000000Z\",\n            \"updated_at\": \"2023-07-28T02:10:41.000000Z\"\n        }\n    ]\n}",
+                                "uid": "31640299-ee6fd6c0-f8e3-418f-8782-6fa448cdea97"
+                            }
+                        ],
+                        "uid": "31640299-beb89cc4-336b-4029-93c4-87cf9c521043"
+                    },
+                    {
+                        "name": "Get Detail By Id",
+                        "id": "493f16e2-ef11-4d80-b502-fdffba399766",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "auth": {
+                                "type": "bearer",
+                                "bearer": [
+                                    {
+                                        "key": "token",
+                                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{api}}/api/information/3",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "information",
+                                    "3"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "6709da31-1e5e-447d-91af-d034fd98ffcf",
+                                "name": "200 - OK",
+                                "originalRequest": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "{{api}}/api/information/3",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "information",
+                                            "3"
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Host",
+                                        "value": "127.0.0.1:8000"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Fri, 28 Jul 2023 02:42:12 GMT"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Fri, 28 Jul 2023 02:42:12 GMT"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "close"
+                                    },
+                                    {
+                                        "key": "X-Powered-By",
+                                        "value": "PHP/7.4.33"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, private"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Limit",
+                                        "value": "60"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Remaining",
+                                        "value": "58"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"message\": \"Success\",\n    \"status\": true,\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"test\",\n        \"description\": \"Test\",\n        \"thumbnail\": \"http://127.0.0.1:8000/storage/thumbnails/9d7f1b9e041ab98b3b0298a2d454991f.jpg\",\n        \"is_active\": 1,\n        \"deleted_at\": null,\n        \"created_at\": \"2023-07-12T22:57:46.000000Z\",\n        \"updated_at\": \"2023-07-12T22:58:02.000000Z\"\n    }\n}",
+                                "uid": "31640299-6709da31-1e5e-447d-91af-d034fd98ffcf"
+                            }
+                        ],
+                        "uid": "31640299-493f16e2-ef11-4d80-b502-fdffba399766"
+                    }
+                ],
+                "id": "82a2a04e-4eca-4e3b-9b4e-cb61af0f7b7e",
+                "uid": "31640299-82a2a04e-4eca-4e3b-9b4e-cb61af0f7b7e"
+            },
+            {
+                "name": "Report",
+                "item": [
+                    {
+                        "name": "Get All Report Categories",
+                        "id": "fc209886-667c-4725-8f35-f1c74dd1904b",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "auth": {
+                                "type": "bearer",
+                                "bearer": [
+                                    {
+                                        "key": "token",
+                                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{api}}/api/report/category",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "report",
+                                    "category"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "dc6a1578-daa7-4a52-bc7b-3ddead723e94",
+                                "name": "200 - OK",
+                                "originalRequest": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "{{api}}/api/report/category",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "report",
+                                            "category"
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Host",
+                                        "value": "127.0.0.1:8000"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Mon, 24 Jul 2023 15:51:37 GMT"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Mon, 24 Jul 2023 15:51:37 GMT"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "close"
+                                    },
+                                    {
+                                        "key": "X-Powered-By",
+                                        "value": "PHP/7.4.33"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, private"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Limit",
+                                        "value": "60"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Remaining",
+                                        "value": "59"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"message\": \"Success\",\n    \"status\": true,\n    \"data\": [\n        {\n            \"id\": 3,\n            \"name\": \"test draft\",\n            \"icon\": \"9d7f1b9e041ab98b3b0298a2d454991f.jpg\",\n            \"unit_id\": 5,\n            \"created_at\": \"2023-07-19T20:22:39.000000Z\",\n            \"updated_at\": \"2023-07-19T20:22:39.000000Z\",\n            \"deleted_at\": null,\n            \"is_active\": 1\n        },\n        {\n            \"id\": 4,\n            \"name\": \"test draft\",\n            \"icon\": \"Screenshot 2022-11-10 205208.png\",\n            \"unit_id\": 4,\n            \"created_at\": \"2023-07-19T20:40:48.000000Z\",\n            \"updated_at\": \"2023-07-19T20:40:48.000000Z\",\n            \"deleted_at\": null,\n            \"is_active\": 1\n        },\n        {\n            \"id\": 5,\n            \"name\": \"test draft\",\n            \"icon\": \"172134.jpg\",\n            \"unit_id\": 4,\n            \"created_at\": \"2023-07-19T20:41:05.000000Z\",\n            \"updated_at\": \"2023-07-19T20:41:05.000000Z\",\n            \"deleted_at\": null,\n            \"is_active\": 1\n        }\n    ]\n}",
+                                "uid": "31640299-dc6a1578-daa7-4a52-bc7b-3ddead723e94"
+                            }
+                        ],
+                        "uid": "31640299-fc209886-667c-4725-8f35-f1c74dd1904b"
+                    },
+                    {
+                        "name": "Get List Province",
+                        "id": "82afe49a-da34-4266-bc61-0272b87ab7d5",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "auth": {
+                                "type": "bearer",
+                                "bearer": [
+                                    {
+                                        "key": "token",
+                                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{api}}/api/province",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "province"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "36effe11-1a0b-45f4-95a3-65661f5b6f94",
+                                "name": "200 - OK",
+                                "originalRequest": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "{{api}}/api/province",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "province"
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Host",
+                                        "value": "127.0.0.1:8000"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Mon, 24 Jul 2023 15:43:57 GMT"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Mon, 24 Jul 2023 15:43:57 GMT"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "close"
+                                    },
+                                    {
+                                        "key": "X-Powered-By",
+                                        "value": "PHP/7.4.33"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, private"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Limit",
+                                        "value": "60"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Remaining",
+                                        "value": "59"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"ACEH\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"SUMATERA UTARA\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"SUMATERA BARAT\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"RIAU\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"JAMBI\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"SUMATERA SELATAN\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"BENGKULU\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"LAMPUNG\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"KEP. BANGKA BELITUNG\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"KEP. RIAU\"\n        },\n        {\n            \"id\": 11,\n            \"name\": \"DKI JAKARTA\"\n        },\n        {\n            \"id\": 12,\n            \"name\": \"JAWA BARAT\"\n        },\n        {\n            \"id\": 13,\n            \"name\": \"JAWA TENGAH\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"DI YOGYAKARTA\"\n        },\n        {\n            \"id\": 15,\n            \"name\": \"JAWA TIMUR\"\n        },\n        {\n            \"id\": 16,\n            \"name\": \"BANTEN\"\n        },\n        {\n            \"id\": 17,\n            \"name\": \"BALI\"\n        },\n        {\n            \"id\": 18,\n            \"name\": \"NUSA TENGGARA BARAT\"\n        },\n        {\n            \"id\": 19,\n            \"name\": \"NUSA TENGGARA TIMUR\"\n        },\n        {\n            \"id\": 20,\n            \"name\": \"KALIMANTAN BARAT\"\n        },\n        {\n            \"id\": 21,\n            \"name\": \"KALIMANTAN TENGAH\"\n        },\n        {\n            \"id\": 22,\n            \"name\": \"KALIMANTAN SELATAN\"\n        },\n        {\n            \"id\": 23,\n            \"name\": \"KALIMANTAN TIMUR\"\n        },\n        {\n            \"id\": 24,\n            \"name\": \"KALIMANTAN UTARA\"\n        },\n        {\n            \"id\": 25,\n            \"name\": \"SULAWESI UTARA\"\n        },\n        {\n            \"id\": 26,\n            \"name\": \"SULAWESI TENGAH\"\n        },\n        {\n            \"id\": 27,\n            \"name\": \"SULAWESI SELATAN\"\n        },\n        {\n            \"id\": 28,\n            \"name\": \"SULAWESI TENGGARA\"\n        },\n        {\n            \"id\": 29,\n            \"name\": \"GORONTALO\"\n        },\n        {\n            \"id\": 30,\n            \"name\": \"SULAWESI BARAT\"\n        },\n        {\n            \"id\": 31,\n            \"name\": \"MALUKU\"\n        },\n        {\n            \"id\": 32,\n            \"name\": \"MALUKU UTARA\"\n        },\n        {\n            \"id\": 33,\n            \"name\": \"PAPUA BARAT\"\n        },\n        {\n            \"id\": 34,\n            \"name\": \"PAPUA\"\n        }\n    ]\n}",
+                                "uid": "31640299-36effe11-1a0b-45f4-95a3-65661f5b6f94"
+                            }
+                        ],
+                        "uid": "31640299-82afe49a-da34-4266-bc61-0272b87ab7d5"
+                    },
+                    {
+                        "name": "Create Ticket Laporan",
+                        "id": "708572a7-6fb7-477b-a720-03a3e959dc9f",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "auth": {
+                                "type": "bearer",
+                                "bearer": [
+                                    {
+                                        "key": "token",
+                                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wva3BwcGEuZm9sa2F0ZWNoLmNvbVwvYXBpXC9zb2NpYWwtbG9naW4iLCJpYXQiOjE2OTE1NTM1ODEsImV4cCI6MTY5MTU1NzE4MSwibmJmIjoxNjkxNTUzNTgxLCJqdGkiOiJyb05XSVFFaDRSbmxQTFdyIiwic3ViIjoxMCwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.o9wuLS2O75vx6cnONeIzWW3XQ9bvLGWRQDD4PFwhhqc",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "formdata",
+                                "formdata": [
+                                    {
+                                        "key": "report_category_id",
+                                        "value": "3",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "fullname",
+                                        "value": "Rahmat Saefulloh",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "gender",
+                                        "value": "l",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "province_id",
+                                        "value": "1",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "tipe_korban",
+                                        "value": "php",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "description",
+                                        "value": "Tes",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "lat",
+                                        "value": "1",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "lng",
+                                        "value": "1",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "address_location",
+                                        "value": "Cimahi",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "userfile",
+                                        "type": "file",
+                                        "src": "/Users/rhmtsaepuloh/Downloads/gamaharsaasia.png"
+                                    },
+                                    {
+                                        "key": "urgency",
+                                        "value": "rendah",
+                                        "type": "text"
+                                    }
+                                ]
+                            },
+                            "url": {
+                                "raw": "{{api}}/api/report",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "report"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "1d7200fe-84c9-41cc-82ba-ed880b1c443b",
+                                "name": "200 - OK",
+                                "originalRequest": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "formdata",
+                                        "formdata": [
+                                            {
+                                                "key": "report_category_id",
+                                                "value": "3",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "fullname",
+                                                "value": "Rahmat Saefulloh",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "gender",
+                                                "value": "l",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "province_id",
+                                                "value": "1",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "tipe_korban",
+                                                "value": "php",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "description",
+                                                "value": "Tes",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "lat",
+                                                "value": "1",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "lng",
+                                                "value": "1",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "address_location",
+                                                "value": "Cimahi",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "userfile",
+                                                "type": "file",
+                                                "src": "/Users/rhmtsaepuloh/Downloads/5wPdO_1688622116.jpg"
+                                            }
+                                        ]
+                                    },
+                                    "url": {
+                                        "raw": "{{api}}/api/report",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "report"
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Host",
+                                        "value": "127.0.0.1:8000"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Tue, 25 Jul 2023 16:47:42 GMT"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Tue, 25 Jul 2023 16:47:42 GMT"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "close"
+                                    },
+                                    {
+                                        "key": "X-Powered-By",
+                                        "value": "PHP/7.4.33"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, private"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Limit",
+                                        "value": "60"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Remaining",
+                                        "value": "59"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"status\": true,\n    \"message\": \"Data laporan berhasil dikirim.\"\n}",
+                                "uid": "31640299-1d7200fe-84c9-41cc-82ba-ed880b1c443b"
+                            }
+                        ],
+                        "uid": "31640299-708572a7-6fb7-477b-a720-03a3e959dc9f"
+                    },
+                    {
+                        "name": "Get My Report",
+                        "id": "d08486d2-cf8e-41e4-9b2a-66c753093f3d",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "auth": {
+                                "type": "bearer",
+                                "bearer": [
+                                    {
+                                        "key": "token",
+                                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wva3BwcGEuZm9sa2F0ZWNoLmNvbVwvYXBpXC9zb2NpYWwtbG9naW4iLCJpYXQiOjE2OTM2MzE2NDUsImV4cCI6MTY5MzYzNTI0NSwibmJmIjoxNjkzNjMxNjQ1LCJqdGkiOiJNMk4xRFExUEZhb2ZMZEZGIiwic3ViIjoxMywicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.YbW9DSoVwORkMkpVjD6xLFM163bGUU0h7xuFm7vVNQQ",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{api}}/api/report/my-report?per_page=10&page=1",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "report",
+                                    "my-report"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "per_page",
+                                        "value": "10"
+                                    },
+                                    {
+                                        "key": "page",
+                                        "value": "1"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "5ad8dd02-a3cf-4e08-8136-7208bf90bd33",
+                                "name": "200 - OK",
+                                "originalRequest": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "{{api}}/api/report/my-report?per_page=10&page=1",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "report",
+                                            "my-report"
+                                        ],
+                                        "query": [
+                                            {
+                                                "key": "per_page",
+                                                "value": "10"
+                                            },
+                                            {
+                                                "key": "page",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Host",
+                                        "value": "127.0.0.1:8000"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Tue, 25 Jul 2023 17:07:25 GMT"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Tue, 25 Jul 2023 17:07:25 GMT"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "close"
+                                    },
+                                    {
+                                        "key": "X-Powered-By",
+                                        "value": "PHP/7.4.33"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, private"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Limit",
+                                        "value": "60"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Remaining",
+                                        "value": "56"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"status\": true,\n    \"message\": \"Success.\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"user_id\": 7,\n            \"report_category_id\": 3,\n            \"description\": \"Tes\",\n            \"attachment_image\": null,\n            \"attachment_video\": null,\n            \"tracking_id\": \"TK-230725-00001\",\n            \"lat\": \"1\",\n            \"lng\": \"1\",\n            \"address_location\": \"Cimahi\",\n            \"stat_progress\": \"open\",\n            \"created_at\": \"2023-07-25T16:37:41.000000Z\",\n            \"updated_at\": \"2023-07-25T16:37:41.000000Z\",\n            \"fullname\": \"Rahmat Saefulloh\",\n            \"province_id\": 1,\n            \"gender\": \"L\",\n            \"tipe_korban\": \"php\",\n            \"province\": {\n                \"id\": 1,\n                \"name\": \"ACEH\"\n            },\n            \"report_category\": {\n                \"id\": 3,\n                \"name\": \"test draft\",\n                \"icon\": \"9d7f1b9e041ab98b3b0298a2d454991f.jpg\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"user_id\": 7,\n            \"report_category_id\": 3,\n            \"description\": \"Tes\",\n            \"attachment_image\": \"qkqeT_1690303593.jpg\",\n            \"attachment_video\": null,\n            \"tracking_id\": \"TK-230725-00001\",\n            \"lat\": \"1\",\n            \"lng\": \"1\",\n            \"address_location\": \"Cimahi\",\n            \"stat_progress\": \"open\",\n            \"created_at\": \"2023-07-25T16:46:33.000000Z\",\n            \"updated_at\": \"2023-07-25T16:46:33.000000Z\",\n            \"fullname\": \"Rahmat Saefulloh\",\n            \"province_id\": 1,\n            \"gender\": \"L\",\n            \"tipe_korban\": \"php\",\n            \"province\": {\n                \"id\": 1,\n                \"name\": \"ACEH\"\n            },\n            \"report_category\": {\n                \"id\": 3,\n                \"name\": \"test draft\",\n                \"icon\": \"9d7f1b9e041ab98b3b0298a2d454991f.jpg\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"user_id\": 7,\n            \"report_category_id\": 3,\n            \"description\": \"Tes\",\n            \"attachment_image\": \"lyhh9_1690303662.jpg\",\n            \"attachment_video\": null,\n            \"tracking_id\": \"TK-230725-00002\",\n            \"lat\": \"1\",\n            \"lng\": \"1\",\n            \"address_location\": \"Cimahi\",\n            \"stat_progress\": \"open\",\n            \"created_at\": \"2023-07-25T16:47:42.000000Z\",\n            \"updated_at\": \"2023-07-25T16:47:42.000000Z\",\n            \"fullname\": \"Rahmat Saefulloh\",\n            \"province_id\": 1,\n            \"gender\": \"L\",\n            \"tipe_korban\": \"php\",\n            \"province\": {\n                \"id\": 1,\n                \"name\": \"ACEH\"\n            },\n            \"report_category\": {\n                \"id\": 3,\n                \"name\": \"test draft\",\n                \"icon\": \"9d7f1b9e041ab98b3b0298a2d454991f.jpg\"\n            }\n        }\n    ],\n    \"pagination\": {\n        \"current_page\": 1,\n        \"total_pages\": 1,\n        \"total_data\": 3\n    }\n}",
+                                "uid": "31640299-5ad8dd02-a3cf-4e08-8136-7208bf90bd33"
+                            }
+                        ],
+                        "uid": "31640299-d08486d2-cf8e-41e4-9b2a-66c753093f3d"
+                    },
+                    {
+                        "name": "Get Detail Report",
+                        "id": "108bb2a1-7a44-46ce-ade1-6a62812fe354",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "auth": {
+                                "type": "bearer",
+                                "bearer": [
+                                    {
+                                        "key": "token",
+                                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wva3BwcGEuZm9sa2F0ZWNoLmNvbVwvYXBpXC9zb2NpYWwtbG9naW4iLCJpYXQiOjE2OTE1NTM1ODEsImV4cCI6MTY5MTU1NzE4MSwibmJmIjoxNjkxNTUzNTgxLCJqdGkiOiJyb05XSVFFaDRSbmxQTFdyIiwic3ViIjoxMCwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.o9wuLS2O75vx6cnONeIzWW3XQ9bvLGWRQDD4PFwhhqc",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{api}}/api/report/1",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "report",
+                                    "1"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "906255ca-b7bf-4a38-8397-20ebf4d17ba0",
+                                "name": "200 - OK",
+                                "originalRequest": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "{{api}}/api/report/4",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "report",
+                                            "4"
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Server",
+                                        "value": "nginx/1.18.0 (Ubuntu)"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Transfer-Encoding",
+                                        "value": "chunked"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "keep-alive"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, private"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Fri, 28 Jul 2023 08:19:48 GMT"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Limit",
+                                        "value": "60"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Remaining",
+                                        "value": "59"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 4,\n        \"user_id\": 7,\n        \"report_category_id\": 3,\n        \"description\": \"Tes\",\n        \"attachment_image\": null,\n        \"attachment_video\": null,\n        \"tracking_id\": \"TK-230726-00001\",\n        \"lat\": \"1\",\n        \"lng\": \"1\",\n        \"address_location\": \"Cimahi\",\n        \"stat_progress\": \"open\",\n        \"is_active\": 1,\n        \"deleted_at\": null,\n        \"created_at\": \"2023-07-26T08:56:33.000000Z\",\n        \"updated_at\": \"2023-07-26T08:56:33.000000Z\",\n        \"fullname\": \"Rahmat Saefulloh\",\n        \"province_id\": 1,\n        \"gender\": \"L\",\n        \"tipe_korban\": \"php\",\n        \"user\": {\n            \"id\": 7,\n            \"name\": \"Rahmat Saefulloh\",\n            \"email\": \"rhmtsaepuloh@gmail.com\",\n            \"email_verified_at\": null,\n            \"role_id\": 2,\n            \"unit_id\": null,\n            \"created_at\": \"2023-07-21T02:27:00.000000Z\",\n            \"updated_at\": \"2023-07-28T02:26:09.000000Z\",\n            \"deleted_at\": null,\n            \"provider_name\": null,\n            \"provider_id\": null,\n            \"phone_number\": null,\n            \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw\",\n            \"last_login\": \"2023-07-23 22:51:13\",\n            \"image_profile\": \"https://kpppa.folkatech.com/storage/image_profiles/DpofE_1690511169.png\",\n            \"is_active\": 1\n        },\n        \"province\": {\n            \"id\": 1,\n            \"name\": \"ACEH\"\n        },\n        \"report_category\": {\n            \"id\": 3,\n            \"name\": \"test draft\",\n            \"icon\": \"https://kpppa.folkatech.com/storage/icons/9d7f1b9e041ab98b3b0298a2d454991f.jpg\"\n        },\n        \"history_status\": {\n            \"id\": 1,\n            \"status\": \"open\",\n            \"created_at\": \"2023-07-26T08:56:33.000000Z\",\n            \"user_id\": 7,\n            \"user\": {\n                \"id\": 7,\n                \"name\": \"Rahmat Saefulloh\",\n                \"email\": \"rhmtsaepuloh@gmail.com\",\n                \"email_verified_at\": null,\n                \"role_id\": 2,\n                \"unit_id\": null,\n                \"created_at\": \"2023-07-21T02:27:00.000000Z\",\n                \"updated_at\": \"2023-07-28T02:26:09.000000Z\",\n                \"deleted_at\": null,\n                \"provider_name\": null,\n                \"provider_id\": null,\n                \"phone_number\": null,\n                \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw\",\n                \"last_login\": \"2023-07-23 22:51:13\",\n                \"image_profile\": \"https://kpppa.folkatech.com/storage/image_profiles/DpofE_1690511169.png\",\n                \"is_active\": 1\n            }\n        },\n        \"discussion\": [\n            {\n                \"id\": 1,\n                \"description\": \"tes\",\n                \"created_at\": \"2023-07-27T02:55:48.000000Z\",\n                \"attachment\": \"\",\n                \"user\": {\n                    \"id\": 7,\n                    \"name\": \"Rahmat Saefulloh\",\n                    \"email\": \"rhmtsaepuloh@gmail.com\",\n                    \"role_id\": 2,\n                    \"unit_id\": null,\n                    \"created_at\": \"2023-07-21T02:27:00.000000Z\",\n                    \"phone_number\": null,\n                    \"image_profile\": \"https://kpppa.folkatech.com/storage/image_profiles/DpofE_1690511169.png\"\n                }\n            }\n        ]\n    }\n}",
+                                "uid": "31640299-906255ca-b7bf-4a38-8397-20ebf4d17ba0"
+                            }
+                        ],
+                        "uid": "31640299-108bb2a1-7a44-46ce-ade1-6a62812fe354"
+                    },
+                    {
+                        "name": "Add Discussion (Komentar)",
+                        "id": "f9f0d20a-a58e-4344-bb7d-e67419b994c0",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "auth": {
+                                "type": "bearer",
+                                "bearer": [
+                                    {
+                                        "key": "token",
+                                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "formdata",
+                                "formdata": [
+                                    {
+                                        "key": "report_id",
+                                        "value": "4",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "description",
+                                        "value": "tes",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "userfile",
+                                        "type": "file",
+                                        "src": "/Users/rhmtsaepuloh/Downloads/5wPdO_1688622116.jpg"
+                                    }
+                                ]
+                            },
+                            "url": {
+                                "raw": "{{api}}/api/report/discussion",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "report",
+                                    "discussion"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "967217b2-1401-4c3c-b9cf-317e5adf1802",
+                                "name": "200 - OK",
+                                "originalRequest": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "formdata",
+                                        "formdata": [
+                                            {
+                                                "key": "report_id",
+                                                "value": "4",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "description",
+                                                "value": "tes",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "userfile",
+                                                "type": "file",
+                                                "src": "/Users/rhmtsaepuloh/Downloads/5wPdO_1688622116.jpg"
+                                            }
+                                        ]
+                                    },
+                                    "url": {
+                                        "raw": "{{api}}/api/report/discussion",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "report",
+                                            "discussion"
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Host",
+                                        "value": "127.0.0.1:8000"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Thu, 27 Jul 2023 02:55:58 GMT"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Thu, 27 Jul 2023 02:55:58 GMT"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "close"
+                                    },
+                                    {
+                                        "key": "X-Powered-By",
+                                        "value": "PHP/7.4.33"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, private"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Limit",
+                                        "value": "60"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Remaining",
+                                        "value": "57"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"status\": true,\n    \"message\": \"Data berhasil dikirim.\"\n}",
+                                "uid": "31640299-967217b2-1401-4c3c-b9cf-317e5adf1802"
+                            }
+                        ],
+                        "uid": "31640299-f9f0d20a-a58e-4344-bb7d-e67419b994c0"
+                    },
+                    {
+                        "name": "Get History Status By Id Laporan",
+                        "id": "ce587887-2c8e-4b43-9aa6-cc01e18570a8",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "auth": {
+                                "type": "bearer",
+                                "bearer": [
+                                    {
+                                        "key": "token",
+                                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wva3BwcGEuZm9sa2F0ZWNoLmNvbVwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MTIyOTM2NSwiZXhwIjoxNjkxMjMyOTY1LCJuYmYiOjE2OTEyMjkzNjUsImp0aSI6IjlTTTBVZE1lVTVtN0htZUQiLCJzdWIiOjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.GLbcGn3wAiLac6Qeks4cfy8EAG8UwMD0GcVLEcn48_w",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{api}}/api/report/history-status/5",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "report",
+                                    "history-status",
+                                    "5"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "7e4e5f37-d40d-4e8a-a633-e9bf50302be1",
+                                "name": "200 - OK",
+                                "originalRequest": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "{{api}}/api/report/history-status/5",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "report",
+                                            "history-status",
+                                            "5"
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Server",
+                                        "value": "nginx/1.18.0 (Ubuntu)"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Transfer-Encoding",
+                                        "value": "chunked"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "keep-alive"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, private"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Sat, 05 Aug 2023 09:56:18 GMT"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Limit",
+                                        "value": "60"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Remaining",
+                                        "value": "55"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"report_id\": 5,\n            \"user_id\": 11,\n            \"status\": \"open\",\n            \"deleted_at\": null,\n            \"created_at\": \"2023-08-03T03:35:28.000000Z\",\n            \"updated_at\": \"2023-08-03T03:35:28.000000Z\",\n            \"user\": {\n                \"id\": 11,\n                \"name\": \"Lana Septiana\",\n                \"email\": \"lana.septiana2@gmail.com\",\n                \"email_verified_at\": null,\n                \"role_id\": 2,\n                \"unit_id\": null,\n                \"created_at\": \"2023-07-31T10:57:17.000000Z\",\n                \"updated_at\": \"2023-08-03T06:54:01.000000Z\",\n                \"deleted_at\": null,\n                \"provider_name\": null,\n                \"provider_id\": null,\n                \"phone_number\": null,\n                \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wva3BwcGEuZm9sa2F0ZWNoLmNvbVwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MTA0NTY0MSwiZXhwIjoxNjkxMDQ5MjQxLCJuYmYiOjE2OTEwNDU2NDEsImp0aSI6InlYTGY5Q29oS3MyUEVpb3AiLCJzdWIiOjExLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.5W_lIJ3DG2vL_u-hgNfAdGA415wSrnxsf7IFJ1ZlL-Y\",\n                \"last_login\": \"2023-08-03 13:54:01\",\n                \"image_profile\": \"https://kpppa.folkatech.com/storage/image_profiles/GoLnR_1690950235.jpg\",\n                \"is_active\": 1,\n                \"token_forgot\": null,\n                \"province_id\": null,\n                \"reg_id\": \"e1jhnVXlRZm1GaeZaJrXbe:APA91bE6ZZLEMjaFlURa8AcUh1fDcC2zbULqSkgREh3nZduJqGLkzow8MtkBnPGPf3orywTmbiSza2L1Q59SrinobfXQRnZCvcgu45V-euyhgGGWKUeWmYCEvfKOKBDKoDD4AlUoVz4B\"\n            }\n        }\n    ]\n}",
+                                "uid": "31640299-7e4e5f37-d40d-4e8a-a633-e9bf50302be1"
+                            }
+                        ],
+                        "uid": "31640299-ce587887-2c8e-4b43-9aa6-cc01e18570a8"
+                    }
+                ],
+                "id": "808c97de-addb-454c-8d28-0ef2f43e0b0c",
+                "uid": "31640299-808c97de-addb-454c-8d28-0ef2f43e0b0c"
+            },
+            {
+                "name": "General Setting",
+                "item": [
+                    {
+                        "name": "Get Setting",
+                        "id": "ecdd948e-80e8-4c17-805a-de1572e17ab0",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "auth": {
+                                "type": "bearer",
+                                "bearer": [
+                                    {
+                                        "key": "token",
+                                        "value": "{{token}}",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{api}}/api/general-setting",
+                                "host": [
+                                    "{{api}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "general-setting"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "939d88a8-6a9b-4b4c-bf3b-84e907895b8c",
+                                "name": "200 - OK",
+                                "originalRequest": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "{{api}}/api/general-setting",
+                                        "host": [
+                                            "{{api}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "general-setting"
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Host",
+                                        "value": "127.0.0.1:8000"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Sat, 05 Aug 2023 18:04:07 GMT"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Sat, 05 Aug 2023 18:04:07 GMT"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "close"
+                                    },
+                                    {
+                                        "key": "X-Powered-By",
+                                        "value": "PHP/7.4.33"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, private"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Limit",
+                                        "value": "60"
+                                    },
+                                    {
+                                        "key": "X-RateLimit-Remaining",
+                                        "value": "58"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"speed_dial_number\": \"0895392054983\"\n    }\n}",
+                                "uid": "31640299-939d88a8-6a9b-4b4c-bf3b-84e907895b8c"
+                            }
+                        ],
+                        "uid": "31640299-ecdd948e-80e8-4c17-805a-de1572e17ab0"
+                    }
+                ],
+                "id": "ee80fbeb-4860-4a34-a8e7-8267fb6af2f1",
+                "uid": "31640299-ee80fbeb-4860-4a34-a8e7-8267fb6af2f1"
+            }
+        ],
+        "event": [
+            {
+                "listen": "prerequest",
+                "script": {
+                    "id": "1205f686-2492-4447-a0a9-ae2bdb5103c3",
+                    "type": "text/javascript",
+                    "exec": [
+                        ""
+                    ]
+                }
+            },
+            {
+                "listen": "test",
+                "script": {
+                    "id": "a207ed43-8229-48f5-ad44-f9730f078941",
+                    "type": "text/javascript",
+                    "exec": [
+                        ""
+                    ]
+                }
+            }
+        ],
+        "variable": [
+            {
+                "key": "api",
+                "value": "https://lapor.folkatech.com",
+                "type": "string"
+            }
+        ]
+    }
+}
